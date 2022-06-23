@@ -1,0 +1,66 @@
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+h2 {
+    margin: 3%;
+}
+
+.photo {
+    width: 300px;
+    height: auto;
+}
+
+.info {
+    text-align: center;
+    box-shadow: 0 0 0.5em rgba(94, 89, 88, 0.89);
+    width: 300px;
+    height: auto;
+    font-family: Helvetica, sans-serif;
+}
+
+.login {
+    margin-top: 0px;
+    font-style: oblique;
+}
+
+.lvl {
+    color: rgba(128, 128, 128, 0.829);
+    font-weight: bold;
+    font-size: 16px;
+}
+
+p {
+    margin: 4%;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+  
+.button {
+    background-color: black;
+    border: none;
+    color: white;
+    height: auto;
+    padding: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+
+.button:hover {
+  background-color: rgba(0, 138, 230, 0.959);
+  color: rgb(247, 247, 243);
+}
+
+.logo {
+    height: 30px;
+    width: auto;
+}

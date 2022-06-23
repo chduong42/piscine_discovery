@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Balloon</title>
+    <style>
+        html, body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #ballon {
+            border-radius: 50%;
+            min-height: 200px;
+            max-height: 420px;
+            min-width: 200px;
+            max-width: 420px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var colors = ["red", "green", "blue"];
+        var taille = 200;
+        var i = 0;
+
+        function BalUp() {
+            ++i;
+            if (i == 3)
+                i = 0;
+            document.getElementById("ballon").style.backgroundColor = colors[i%3];
+            taille += 10;
+            if (taille > 420) {
+                taille = 200;
+            }
+            document.getElementById("ballon").style.height = taille + "px";
+            document.getElementById("ballon").style.width = taille + "px";
+        }
+        
+        function BalDown() {
+            --i;
+            if (i < 0)
+                i = 2;
+            document.getElementById("ballon").style.backgroundColor = colors[i%3];
+            if (taille > 200) {
+                taille -= 5;
+            }
+            document.getElementById("ballon").style.height = taille + "px";
+            document.getElementById("ballon").style.width = taille + "px";
+        }
+    </script>
+
+    <div id="ballon" onclick="BalUp()" onmouseout="BalDown()"></div>
+</body>
+</html>

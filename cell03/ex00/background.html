@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Background</title>
+    <link rel="stylesheet" href="background.css">
+</head>
+<body>
+    <script>
+        function getRandomColor() {
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        document.body.style.backgroundColor = color;
+        }
+    </script>
+
+    <button type="button" onclick="getRandomColor()">Change background</button>
+</body>
+</html>

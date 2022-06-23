@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Calculatrice</title>
+</head>
+<body>
+    <input type="text" id="valA" name="valA" >
+    <select name="operator" id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+    </select>
+    <input type="text" id="valB" name="valB">
+    <input type="submit" onclick="calcul()" value="Try me!">
+    
+<script>
+    setInterval(function(){ alert("Please, use me...");}, 30 * 1000);
+    function calcul() {
+        let a = document.getElementById("valA").value;
+        let b = document.getElementById("valB").value;
+        let op = document.getElementById("operator").value;
+        let res = 0;
+        a = Number(a);
+        b = Number(b);
+
+        if (isNaN(a) || isNaN(b) || a < 0 || b < 0) {
+            alert("Error :(");
+            return;
+        }
+        if (op === "+") {
+            res = a + b;   
+        }
+        else if (op === "-") {
+            res = a - b;   
+        }
+        else if (op === "*") {
+            res = a * b;
+        }
+        else if (op === "/" || op === "%") {
+            if (b == 0) {
+                alert("It’s over 9000!");
+                return; 
+            }
+            if (op === "%") {
+                res = a % b;
+            }
+            else {
+                res = a / b;   
+            }
+        }
+        console.log(res);
+        alert("Resultat = " + res);
+    }
+</script>
+</body>
+</html>
